@@ -1,0 +1,21 @@
+# Cartesian trajectory with quintic time scaling
+# Bad gains demo
+traj_type = 'CARTESIAN_QUINTIC'
+duration_s = 4.0
+actual_init_config = [0.0, -0.5, 0.5, 0.0, 0.2, 0.0]
+
+[Ts_start]
+SE3 = [
+    [1.0, 0.0, 0.0, 0.5],
+    [0.0, 1.0, 0.0, 0.0],
+    [0.0, 0.0, 1.0, 0.3],
+    [0.0, 0.0, 0.0, 1.0]
+]
+
+[Ts_end]
+SE3 = [
+    [1.0, 0.0, 0.0, 0.3],
+    [0.0, 0.0, -1.0, 0.3],
+    [0.0, 1.0, 0.0, 0.4],
+    [0.0, 0.0, 0.0, 1.0]
+]
